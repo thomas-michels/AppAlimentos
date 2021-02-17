@@ -1,9 +1,11 @@
-package com.thomas.alimentos;
+package com.thomas.alimentos.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.thomas.alimentos.R;
 
 public class DetailsActivity extends AppCompatActivity {
 
