@@ -6,6 +6,12 @@ public class FoodEntity {
     private String name;
     private int calories;
 
+    public FoodEntity(int id, String name, int calories) {
+        this.id = id;
+        this.name = name;
+        this.calories = calories;
+    }
+
     public int getId() {
         return id;
     }

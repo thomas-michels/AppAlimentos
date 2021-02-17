@@ -5,8 +5,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.thomas.alimentos.business.FoodBusiness;
 import com.thomas.alimentos.entity.FoodEntity;
 import com.thomas.alimentos.R;
+import com.thomas.alimentos.repository.FoodRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FoodEntity f = new FoodEntity();
-        f.getCalories();
-
-        List<FoodEntity> foodEntityList = new ArrayList<>();
+        List<FoodEntity> foodEntityList = new FoodBusiness().getList();
 
         this.mViewHolder.mRecyclerFood = findViewById(R.id.recycler_food);
     }
