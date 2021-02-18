@@ -10,6 +10,7 @@ import android.os.Bundle;
 import com.thomas.alimentos.OnListClick;
 import com.thomas.alimentos.adapter.FoodAdapter;
 import com.thomas.alimentos.business.FoodBusiness;
+import com.thomas.alimentos.constants.FoodConstants;
 import com.thomas.alimentos.entity.FoodEntity;
 import com.thomas.alimentos.R;
 import com.thomas.alimentos.repository.FoodRepository;
@@ -34,9 +35,15 @@ public class MainActivity extends AppCompatActivity {
         OnListClick foodListener = new OnListClick() {
             @Override
             public void onClick(int id) {
-                // Navegação
 
+                // Criando bundle para armazenar o id do item clicado
+                Bundle bundle = new Bundle();
+                bundle.putInt(FoodConstants.FOOD_ID, id);
+
+                // Navegação
                 Intent intent = new Intent(getApplicationContext(), DetailsActivity.class);
+                intent.putExtras(bundle);
+
                 startActivity(intent);
             }
         };
