@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.thomas.alimentos.OnListClick;
 import com.thomas.alimentos.adapter.FoodAdapter;
 import com.thomas.alimentos.business.FoodBusiness;
 import com.thomas.alimentos.entity.FoodEntity;
@@ -29,8 +31,18 @@ public class MainActivity extends AppCompatActivity {
         // Obter a recycler view
         this.mViewHolder.mRecyclerFood = findViewById(R.id.recycler_food);
 
+        OnListClick foodListener = new OnListClick() {
+            @Override
+            public void onClick(int id) {
+                // Navegação
+
+                Intent intent = new Intent(getApplicationContext(), DetailsActivity.class);
+                startActivity(intent);
+            }
+        };
+
         // Adapter
-        FoodAdapter adapter = new FoodAdapter(foodEntityList);
+        FoodAdapter adapter = new FoodAdapter(foodEntityList, foodListener);
         this.mViewHolder.mRecyclerFood.setAdapter(adapter);
 
         // Criar layout

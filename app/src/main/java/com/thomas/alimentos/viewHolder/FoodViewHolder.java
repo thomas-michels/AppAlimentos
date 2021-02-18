@@ -6,6 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.thomas.alimentos.OnListClick;
 import com.thomas.alimentos.R;
 import com.thomas.alimentos.entity.FoodEntity;
 
@@ -21,10 +22,15 @@ public class FoodViewHolder extends RecyclerView.ViewHolder {
         this.mTextCalories = itemView.findViewById(R.id.text_calories);
     }
 
-    public void bind (FoodEntity food) {
+    public void bind (FoodEntity food, OnListClick listener) {
         this.mTextName.setText(food.getName());
-
-        // String.valueOf converte o int em string
         this.mTextCalories.setText(String.valueOf(food.getCalories()));
+
+        this.mTextName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onClick(food.getId());
+            }
+        });
     }
 }
