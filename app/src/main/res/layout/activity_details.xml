@@ -10,6 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:theme="@style/HighlightedInformation"
+        android:textSize="22sp"
         android:padding="16dp"
         android:text="Alimento"/>
 
@@ -25,8 +27,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:theme="@style/HighlightedInformation"
         android:layout_below="@id/view_name"
-        android:text="Tamanho da porção"/>
+        android:text="@string/tamanho_da_por_o"/>
 
     <TextView
         android:id="@+id/text_unit"
@@ -34,6 +37,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:layout_below="@id/view_name"
+        android:theme="@style/DefaultInformation"
         android:layout_alignParentEnd="true"
         android:text="Un"/>
 
@@ -42,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:theme="@style/DefaultInformation"
         android:layout_below="@id/view_name"
         android:layout_toStartOf="@id/text_unit"
         android:text="Qnt"/>
@@ -58,7 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_quantity"
         android:padding="16dp"
-        android:text="Caloria"/>
+        android:theme="@style/HighlightedInformation"
+        android:text="@string/caloria"/>
 
     <TextView
         android:id="@+id/text_calories"
@@ -67,6 +73,7 @@
         android:layout_below="@+id/view_quantity"
         android:layout_alignParentEnd="true"
         android:padding="16dp"
+        android:theme="@style/DefaultInformation"
         android:text="90"/>
 
     <View
@@ -82,7 +89,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_calories"
         android:padding="16dp"
-        android:text="Informações"/>
+        android:theme="@style/HighlightedInformation"
+        android:text="@string/informa_es"/>
 
     <TextView
         android:id="@+id/text_description"
@@ -90,5 +98,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_information"
         android:padding="16dp"
-        android:text="Nenhuma informação extra para ser mostrada."/>
+        android:theme="@style/DefaultInformation"
+        android:text="@string/nenhuma_informa_o_extra_para_ser_mostrada"/>
 </RelativeLayout>

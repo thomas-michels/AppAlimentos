@@ -13,4 +13,16 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="HighlightedInformation">
+        <item name="fontFamily">@font/quicksand_light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="DefaultInformation">
+        <item name="fontFamily">@font/alegreya</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>

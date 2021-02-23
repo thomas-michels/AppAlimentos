@@ -7,15 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.thomas.alimentos.OnListClick;
+import com.thomas.alimentos.listener.OnListClick;
 import com.thomas.alimentos.adapter.FoodAdapter;
 import com.thomas.alimentos.business.FoodBusiness;
 import com.thomas.alimentos.constants.FoodConstants;
 import com.thomas.alimentos.entity.FoodEntity;
 import com.thomas.alimentos.R;
-import com.thomas.alimentos.repository.FoodRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {

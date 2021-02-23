@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.thomas.alimentos.OnListClick;
+import com.thomas.alimentos.listener.OnListClick;
 import com.thomas.alimentos.R;
 import com.thomas.alimentos.entity.FoodEntity;
 import com.thomas.alimentos.viewHolder.FoodViewHolder;

@@ -1,4 +1,4 @@
-package com.thomas.alimentos;
+package com.thomas.alimentos.listener;
 
 public interface OnListClick {
     void onClick(int id);
