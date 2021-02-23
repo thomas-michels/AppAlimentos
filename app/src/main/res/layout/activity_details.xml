@@ -1,25 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     tools:context=".ui.DetailsActivity">
 
     <TextView
         android:id="@+id/text_name"
-        android:layout_width="0dp"
-        android:layout_weight="3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:padding="16dp"
         android:text="Alimento"/>
 
+    <View
+        android:id="@+id/view_name"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text_name"
+        android:background="@color/grey"/>
+
     <TextView
-        android:id="@+id/text_calories"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:id="@+id/text_portion"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_below="@id/view_name"
+        android:text="Tamanho da porção"/>
+
+    <TextView
+        android:id="@+id/text_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_below="@id/view_name"
+        android:layout_alignParentEnd="true"
+        android:text="Un"/>
+
+    <TextView
+        android:id="@+id/text_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_below="@id/view_name"
+        android:layout_toStartOf="@id/text_unit"
+        android:text="Qnt"/>
+
+    <View
+        android:id="@+id/view_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text_quantity"
+        android:background="@color/grey"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_quantity"
         android:padding="16dp"
         android:text="Caloria"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/text_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_quantity"
+        android:layout_alignParentEnd="true"
+        android:padding="16dp"
+        android:text="90"/>
+
+    <View
+        android:id="@+id/view_calories"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text_calories"
+        android:background="@color/grey"/>
+
+    <TextView
+        android:id="@+id/text_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_calories"
+        android:padding="16dp"
+        android:text="Informações"/>
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_information"
+        android:padding="16dp"
+        android:text="Nenhuma informação extra para ser mostrada."/>
+</RelativeLayout>
