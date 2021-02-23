@@ -1,11 +1,15 @@
 package com.thomas.alimentos.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.thomas.alimentos.listener.OnListClick;
 import com.thomas.alimentos.adapter.FoodAdapter;
@@ -52,6 +56,36 @@ public class MainActivity extends AppCompatActivity {
 
         // Criar layout
         this.mViewHolder.mRecyclerFood.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        // Chamar menu
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // Metodo de clicks do menu
+
+        item.setChecked(true);
+
+        // Filtro
+        switch (item.getItemId()) {
+            case R.id.filter_low: {
+
+            }
+            case R.id.filter_medium: {
+
+            }
+            default: {
+
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private static class ViewHolder {
