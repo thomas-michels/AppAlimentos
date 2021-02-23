@@ -4,4 +4,7 @@
     <string name="tamanho_da_por_o">Tamanho da porção</string>
     <string name="caloria">Caloria</string>
     <string name="nenhuma_informa_o_extra_para_ser_mostrada">Nenhuma informação extra para ser mostrada.</string>
+    <string name="low_calorie">Baixa Caloria</string>
+    <string name="medium_calorie">Média Caloria</string>
+    <string name="high_calorie">Alta Caloria</string>
 </resources>
