@@ -1,4 +1,4 @@
-package com.thomas.alimentos.repository;
+package com.thomas.alimentos.services.repository;
 
 import com.thomas.alimentos.entity.FoodEntity;
 

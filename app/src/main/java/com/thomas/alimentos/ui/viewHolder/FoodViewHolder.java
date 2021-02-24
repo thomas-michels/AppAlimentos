@@ -1,4 +1,4 @@
-package com.thomas.alimentos.viewHolder;
+package com.thomas.alimentos.ui.viewHolder;
 
 import android.view.View;
 import android.widget.TextView;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.thomas.alimentos.listener.OnListClick;
+import com.thomas.alimentos.services.listener.OnListClick;
 import com.thomas.alimentos.R;
 import com.thomas.alimentos.entity.FoodEntity;
 

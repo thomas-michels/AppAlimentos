@@ -1,4 +1,4 @@
-package com.thomas.alimentos.constants;
+package com.thomas.alimentos.services.constants;
 
 public class FoodConstants {
     public static String FOOD_ID = "foodId";

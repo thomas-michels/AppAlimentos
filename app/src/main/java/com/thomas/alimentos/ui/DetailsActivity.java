@@ -8,8 +8,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.thomas.alimentos.R;
-import com.thomas.alimentos.business.FoodBusiness;
-import com.thomas.alimentos.constants.FoodConstants;
+import com.thomas.alimentos.services.business.FoodBusiness;
+import com.thomas.alimentos.services.constants.FoodConstants;
 import com.thomas.alimentos.entity.FoodEntity;
 
 public class DetailsActivity extends AppCompatActivity {

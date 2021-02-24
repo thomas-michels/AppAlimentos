@@ -1,8 +1,8 @@
-package com.thomas.alimentos.business;
+package com.thomas.alimentos.services.business;
 
-import com.thomas.alimentos.constants.FoodConstants;
+import com.thomas.alimentos.services.constants.FoodConstants;
 import com.thomas.alimentos.entity.FoodEntity;
-import com.thomas.alimentos.repository.FoodRepository;
+import com.thomas.alimentos.services.repository.FoodRepository;
 
 import java.util.ArrayList;
 import java.util.List;
