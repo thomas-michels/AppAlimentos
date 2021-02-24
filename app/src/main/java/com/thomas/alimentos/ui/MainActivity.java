@@ -23,18 +23,16 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private ViewHolder mViewHolder = new ViewHolder();
+    private FoodBusiness mFoodBusiness = new FoodBusiness();
+    private OnListClick mListener;
+    private int mFilter =  FoodConstants.FILTER.NO_FILTER;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<FoodEntity> foodEntityList = new FoodBusiness().getList();
-
-        // Obter a recycler view
-        this.mViewHolder.mRecyclerFood = findViewById(R.id.recycler_food);
-
-        OnListClick foodListener = new OnListClick() {
+        this.mListener = new OnListClick() {
             @Override
             public void onClick(int id) {
 
@@ -50,12 +48,13 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        // Adapter
-        FoodAdapter adapter = new FoodAdapter(foodEntityList, foodListener);
-        this.mViewHolder.mRecyclerFood.setAdapter(adapter);
+        // Obter a recycler view
+        this.mViewHolder.mRecyclerFood = findViewById(R.id.recycler_food);
 
         // Criar layout
         this.mViewHolder.mRecyclerFood.setLayoutManager(new LinearLayoutManager(this));
+
+        this.listFood();
     }
 
     @Override
@@ -76,16 +75,25 @@ public class MainActivity extends AppCompatActivity {
         // Filtro
         switch (item.getItemId()) {
             case R.id.filter_low: {
-
+                this.mFilter = FoodConstants.FILTER.CAL_LOW;
+                break;
             }
             case R.id.filter_medium: {
-
+                this.mFilter = FoodConstants.FILTER.CAL_MEDIUM;
+                break;
             }
             default: {
-
+                this.mFilter = FoodConstants.FILTER.CAL_HIGH;
+                break;
             }
         }
+        this.listFood();
         return super.onOptionsItemSelected(item);
+    }
+
+    private void listFood(){
+        List<FoodEntity> foodEntityList = this.mFoodBusiness.getList(this.mFilter);
+        this.mViewHolder.mRecyclerFood.setAdapter(new FoodAdapter(foodEntityList, this.mListener));
     }
 
     private static class ViewHolder {
