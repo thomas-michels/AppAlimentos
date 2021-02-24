@@ -7,4 +7,5 @@
     <string name="low_calorie">Baixa Caloria</string>
     <string name="medium_calorie">Média Caloria</string>
     <string name="high_calorie">Alta Caloria</string>
+    <string name="calorias">calorias</string>
 </resources>

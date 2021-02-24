@@ -26,7 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_below="@+id/text_name"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:paddingStart="8dp"
+        android:paddingBottom="8dp"
+        android:paddingEnd="0dp"
         android:theme="@style/DefaultInformation"
         android:text="Qnt"/>
 
@@ -36,7 +38,9 @@
         android:layout_toEndOf="@+id/text_quantity"
         android:layout_below="@id/text_name"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="8dp"
         android:theme="@style/DefaultInformation"
         android:text="Unit"/>
 

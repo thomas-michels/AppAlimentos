@@ -30,6 +30,9 @@ public class DetailsActivity extends AppCompatActivity {
         // Elementos de Interface
         this.mViewHolder.mTextName = findViewById(R.id.text_name);
         this.mViewHolder.mTextCalories = findViewById(R.id.text_calories);
+        this.mViewHolder.mTextQuantity = findViewById(R.id.text_quantity);
+        this.mViewHolder.mTextUnit = findViewById(R.id.text_unit);
+        this.mViewHolder.mTextDescription = findViewById(R.id.text_description);
 
         this.getData();
     }
@@ -55,15 +58,26 @@ public class DetailsActivity extends AppCompatActivity {
             // Carrega dados
             FoodEntity foodEntity = new FoodBusiness().get(this.mId);
 
+            String strCalories = String.format("%s %s", foodEntity.getCalories(), this.getString(R.string.calorias));
+
             // Seta variaveis para aparecer na tela
             
             this.mViewHolder.mTextName.setText(foodEntity.getName());
-            this.mViewHolder.mTextCalories.setText(String.valueOf(foodEntity.getCalories()));
+            this.mViewHolder.mTextCalories.setText(strCalories);
+            this.mViewHolder.mTextQuantity.setText(String.valueOf(foodEntity.getQuantity()));
+            this.mViewHolder.mTextUnit.setText(foodEntity.getUnit());
+
+            if (!foodEntity.getDescription().equals("")) {
+                this.mViewHolder.mTextDescription.setText(foodEntity.getDescription());
+            }
         }
     }
 
     private static class ViewHolder {
         TextView mTextName;
         TextView mTextCalories;
+        TextView mTextQuantity;
+        TextView mTextUnit;
+        TextView mTextDescription;
     }
 }
